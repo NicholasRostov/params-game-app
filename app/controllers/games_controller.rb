@@ -23,5 +23,14 @@ class GamesController < ApplicationController
         render "number_game.html.erb"
     end
 
+    def form_result_method
+      @message = params[:form_message]
+      render "form_result.html.erb"
+    end
+
+    def form_params_method
+      render "form.html.erb"
+    end
+
   end
 
