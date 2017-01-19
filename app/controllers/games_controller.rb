@@ -10,7 +10,7 @@ class GamesController < ApplicationController
     end
 
 
-  def guess_number_method
+  def url_guess_number_method
     @guess = params[:guessed_number].to_i
     @answer = 42
     if @guess > @answer
@@ -18,9 +18,10 @@ class GamesController < ApplicationController
     elsif @guess < @answer
       @message = "Your guess is too low"
     else
-      @message "Your guess is correct!"
-      end
+      @message = "Your guess is correct!"
+    end
         render "number_game.html.erb"
     end
+
   end
 
